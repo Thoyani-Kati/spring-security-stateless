@@ -1,25 +1,28 @@
 package spring.security.chapter3.users;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import lombok.Data;
+@Data
 public class SecurityDummyUser implements UserDetails {
-
+    private DummyUserEntity user;
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return List.of(()-> "READ");
     }
 
     @Override
     public String getPassword() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return user.getPassword();
     }
 
     @Override
     public String getUsername() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return user.getName();
     }
      
     
