@@ -10,14 +10,7 @@ public class DummyUserEntity {
     public DummyUserEntity(){
         this.name = "Thoyani";
         this.password = "1234";
-        // var user = User
-        // .withUsername("tHOY")
-        // .password("asd")
-        // .authorities(()->"READ")
-        // .accountExpired(false)
-        // .disabled(true)
-        // .build();
-        // user=this;
+        
     }
 
     public DummyUserEntity(String name , String password){
