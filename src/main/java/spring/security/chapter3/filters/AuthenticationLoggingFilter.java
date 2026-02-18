@@ -10,6 +10,7 @@ import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.http.HttpServletRequest;
 
+
 public class AuthenticationLoggingFilter implements Filter {
     private final Logger loger = Logger.getLogger(AuthenticationLoggingFilter.class.getName());
     @Override
